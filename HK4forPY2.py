@@ -85,4 +85,4 @@ item = [[i[1],i[0]] for i in item];
 #descending order
 item.sort(reverse = True)
 for i in range(0,50):
-    print(item[i][1])
+    print(str(item[i][1][0])+','+str(item[i][1][1]))
