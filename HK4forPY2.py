@@ -34,7 +34,7 @@ for col in range(0,seq_len):
     for val in column_dist[col].values():
         if val != 0:
             h -= val*math.log(val,2)
-    column_entropy[col] = h
+    column_entropy[col] = round(h,6)
 
 #TASK3 pij(x,y)
 nul = ["A","U","G","C","-"]
@@ -65,7 +65,7 @@ for i in range(0,seq_len-1):
                     pi = column_dist[i][nul1]
                     pj = column_dist[j][nul2]
                     mi += pij*math.log(pij/(pi*pj),2)
-        colpair_mi[(i,j)] = mi
+        colpair_mi[(i,j)] = round(mi,6)
 
 #TASK5: print result
 #item contance (key,value), where key is i = 0,1,2,...
